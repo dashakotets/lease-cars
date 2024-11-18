@@ -23,6 +23,12 @@ a{
     padding: 0 10px;
 }
 
+.section-title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
 .wrapper{
     min-height: 100%;
     display: flex;
@@ -115,9 +121,17 @@ body{
     font-weight: 700;
 }
 
-.swiper-wrapper{
-    background: rgba(21, 21, 21, .9);
+.swiper::before{
+    content: '';
+    background: rgba(21, 21, 21, .3);
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
+
 
 .swiper-slide{
     height: 100vh;
@@ -140,6 +154,88 @@ body{
 }
 
 /* ------------------------------------- */
+
+/* ---------------why-lease---------------------- */
+
+.why-lease {
+    padding: 150px 0;
+}
+
+.why-lease-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+.why-lease-item {
+}
+.why-lease-item-img {
+    margin-bottom: 30px;
+}
+.why-lease-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.why-lease-text {
+    text-align: left;
+}
+
+/* ------------------------------------- */
+
+/* ---------------how-does---------------------- */
+
+
+.how-does {
+    padding-bottom: 150px;
+}
+
+.inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.how-does-text {
+}
+.how-does-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+.how-does-list {
+    padding: 50px 0 70px;
+    counter-reset: myCounter;
+}
+
+.how-does-item::before{
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0066FF;
+    font-size: 48px;
+    font-weight: 700;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+
+}
+.how-does-item {
+    list-style-type: none;
+    width: 270px;
+    position: relative;
+    margin-left: auto;
+    padding-left: 240px;
+    left: 0;
+    box-sizing: content-box;
+}
+
+
+/* ------------------------------------- */
+
 
 /* --------------footer--------------- */
 .footer {
