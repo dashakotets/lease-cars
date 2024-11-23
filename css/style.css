@@ -89,6 +89,24 @@ body{
     color: #0066FF;
 }
 
+.menu-btn{
+    width: 30px;
+    height: 20px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn span{
+    height: 2px;
+    background-color: #fff;
+    width: 100%;}
+
 /* ------------------------------------- */
 
 /* ----------------main----------- */
@@ -553,3 +571,88 @@ color: #0066FF;
 }
 
 /* -------------------------------------- */
+
+
+/* -----------------adaptive--------------------- */
+
+@media (max-width: 1180px){
+    .important-list{
+        gap: 30px 20px;
+    }
+    .important-item-img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1040px){
+    .video-content{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 860px){
+    .why-lease-list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .important-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-btn{
+        display: flex;
+    }
+
+    .menu-btn, .logo{
+        position: relative;
+        z-index: 10;
+    }
+
+    .menu-list{
+        position: absolute;
+        background-color: #151515;
+        flex-direction: column;
+        top: 0;
+        left: 0;right: 0;
+        bottom: 0;
+        align-items: center;
+        z-index: 5;
+        padding-top: 200px;
+        height: 100vh;
+        transform: translateY(-100%);
+        transition: transform .3 ease;
+    }
+
+    .menu-list.menu-list--active{
+        transform: translateY(0%);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-menu{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .video-content{
+        height: 400px;
+    }
+
+    .title{
+        font-size: 70px;
+    }
+
+    .top-link{
+        font-size: 28px;
+        padding: 16px;
+
+        max-width: 360px;
+    }
+
+    .swiper-pagination-bullet{
+        width: 60px;
+    }
+}
